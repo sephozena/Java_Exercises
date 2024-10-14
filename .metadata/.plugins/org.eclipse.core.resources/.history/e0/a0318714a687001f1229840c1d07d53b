@@ -1,0 +1,34 @@
+package Practice7;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+	}
+	
+	public static void displayMenu() {
+		System.out.println("Menu");
+		System.out.println("1. view products");
+		System.out.println("2. create order");
+		System.out.println("3. view order");
+		System.out.println("4. terminate program");
+		System.out.println("Choose option:");
+	}
+	
+	public int getUserInput(Scanner scanner) {
+		int userInput = 0;
+		while(true) {
+			userInput = scanner.nextInt();
+			scanner.nextLine();
+			break;
+		}catch (InputMismatchException e) {
+			// TODO: handle exception
+		}
+		return userInput;
+	}
+
+}

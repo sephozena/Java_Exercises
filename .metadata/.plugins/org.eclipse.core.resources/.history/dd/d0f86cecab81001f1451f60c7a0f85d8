@@ -1,0 +1,15 @@
+package Practice6;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Order {
+	
+	private List<Product> productOrderList = new ArrayList<Product>();
+	private double totalPrice;
+	
+	public Order() {
+		productOrderList;
+	}
+
+}

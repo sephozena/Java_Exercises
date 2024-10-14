@@ -1,0 +1,12 @@
+package Practice6;
+
+public class Customer {
+	
+	private String customerName;
+	private double customerBlance;
+	
+	public Customer(String customerName, double customerBalance){
+		
+	}
+
+}

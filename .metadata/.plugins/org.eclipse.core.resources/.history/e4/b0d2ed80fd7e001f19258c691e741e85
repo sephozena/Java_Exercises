@@ -1,0 +1,61 @@
+package Inventory;
+
+import java.util.Scanner;
+
+public class InventorySystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        InventoryItem[] items = {
+            new InventoryItem("Monitor", 50),
+            new InventoryItem("Keyboard", 150),
+            new InventoryItem("Mouse", 100)
+        };
+
+        InventoryManagement inventory = new InventoryManagement(items);
+
+        while (true) {
+            System.out.println("\nInventory Management Menu:");
+            System.out.println("1. Add Stock");
+            System.out.println("2. Remove Stock");
+            System.out.println("3. Display Inventory");
+            System.out.println("4. Exit");
+            System.out.print("Choose an option: ");
+            
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline
+
+            if (choice == 1) {
+                System.out.print("Enter item name: ");
+                String itemName = scanner.nextLine();
+                System.out.print("Enter quantity to add: ");
+                int quantity = scanner.nextInt();
+
+                try {
+                    inventory.addStock(itemName, quantity);
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+            } else if (choice == 2) {
+                System.out.print("Enter item name: ");
+                String itemName = scanner.nextLine();
+                System.out.print("Enter quantity to remove: ");
+                int quantity = scanner.nextInt();
+
+                try {
+                    inventory.removeStock(itemName, quantity);
+                } catch (IllegalArgumentException | IllegalStateException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+            } else if (choice == 3) {
+                inventory.displayInventory();
+            } else if (choice == 4) {
+                System.out.println("Exiting the inventory system.");
+                scanner.close();
+                return;
+            } else {
+            	throw new IllegalArgumentException("Invalid option, please try again.");
+            }
+        }
+    }
+}

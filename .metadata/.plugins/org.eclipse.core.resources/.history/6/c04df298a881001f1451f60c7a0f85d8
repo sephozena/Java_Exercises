@@ -1,0 +1,55 @@
+package Practice6;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductManagement {
+
+	private List<Product> productList = new ArrayList<Product>(); 
+	
+	public ProductManagement() {
+//		productList.add(new Product("Apple", 1.35 , 20, "fruit", "10-09-24"));
+		ProductWeapon weapon = new ProductWeapon("Sword", "Dagger", 9999, 50, "Slashing");
+		ProductElectronic gadget = new ProductElectronic("Gadget", "Xbox", 750, 10, "1 year");
+		Product product = new Product("Belt2", 1.35 , 20);
+		productList.add(product);
+		productList.add(gadget);
+		productList.add(weapon);
+
+		productList.add(new Product("Belt", 1.35 , 20));
+		productList.add(new Product("Gloves", .75, 25));
+		
+		productList.add(new ProductFood("Junkfood","Pizza", 50.50, 20, "10-03-24"));
+		productList.add(new ProductFood("Vegie", "Asparagus", 10, 20, "10-04-24"));
+		productList.add(new ProductFood("Fruit", "Apple", 15, 20, "10-10-24"));
+		productList.add(new ProductFood("Fruit", "Mango", 15, 19, "10-10-24"));
+
+		productList.add(new ProductElectronic("Gadget", "Laptop", 750, 10, "1 year"));
+		productList.add(new ProductElectronic("Gadget", "Android Phone", 175.35, 30, "6 months"));
+		productList.add(new ProductElectronic("Appliance", "TV", 230.50, 50, "15 months"));
+		productList.add(new ProductElectronic("Appliance", "Ref", 300.50, 50, "15 months"));
+		
+		productList.add(new ProductWeapon("Sword", "Claymore", 9999, 50, "Slashing"));
+		productList.add(new ProductWeapon("Gun", "Pistol", 9999, 50, "Piercing"));
+
+	}
+	
+	public void displayAllProduct() {
+		for(Product product : productList) {
+			if(product.getProductType().equalsIgnoreCase("sword")  || product.getProductType().contains("generic")) {
+				System.out.println("Product name: " + product.getProductName() +
+						"\nProduct type: " + product.getProductType() +
+						"\nProduct Quantity: " + product.getProductQuantity()+
+						"\nPrice: "+ product.getProductPrice() +"\n"); 
+			}
+
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "ProductManagement";
+	}
+
+
+}

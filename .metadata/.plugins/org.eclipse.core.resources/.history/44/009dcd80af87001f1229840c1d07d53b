@@ -1,0 +1,12 @@
+package Exercise;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		private List<Product> productList = new ArrayList<Product>();
+		Product product = new Product("pen", 20, 1.55);
+		
+	}
+}

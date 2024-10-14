@@ -1,0 +1,39 @@
+package Inheritance;
+
+public class Employee extends Person{
+	private String name;
+	private int age;
+	private int empID;
+	// we made the access modifier of 'salary' as protected so it is accessible by Employee's subclass (dev/qa class)
+	protected double salary; 
+	
+	public Employee (String name,
+			int age,
+			double salary) {
+		
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+		this.empID = empID;
+	}
+	
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getAge() {
+		return this.age;
+	}
+	public double getSalary() {
+		return this.salary;
+	}
+	
+	public void raiseSalary() {
+		this.salary = salary * 1.2;
+	}
+	
+
+
+}
+

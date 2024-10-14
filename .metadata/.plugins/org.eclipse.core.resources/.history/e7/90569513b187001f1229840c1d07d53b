@@ -1,0 +1,39 @@
+package Exercise;
+
+public class ProductFruit extends Product {
+	private String itemName;
+	private int itemQty;
+	private double itemPrice;
+	private String itemType;
+
+	public ProductFruit(String itemName, int itemQty, double itemPrice, String itemType) {
+		// TODO Auto-generated constructor stub
+		super(itemName, itemQty, itemPrice);
+		this.itemType = itemType;
+	}
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public int getItemQty() {
+		return itemQty;
+	}
+
+	public double getItemPrice() {
+		return itemPrice;
+	}
+	
+	@Override
+	public String itemType() {
+		return itemType;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductFruit [itemName=" + itemName + ", itemType=" + itemType + "]";
+	}
+
+	
+	
+}

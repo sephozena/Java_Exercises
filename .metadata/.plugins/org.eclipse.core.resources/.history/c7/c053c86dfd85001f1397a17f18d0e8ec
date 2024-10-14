@@ -1,0 +1,60 @@
+package Practice7;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		ProductManagement productManagement = new ProductManagement();
+		while(true) {
+			displayMenu();
+			int userInput = getUserInput(scanner);
+			
+			switch(userInput) {
+			case 1: System.out.println("test1");
+			productManagement.displayAllProduct();
+				break;
+			case 2:System.out.println("test2");
+				break;
+			case 3:System.out.println("test3");
+				break;
+			case 4:
+				System.out.println("test4");
+				scanner.close();
+				System.out.println("program terminated");
+				return;
+			default:
+				System.out.println("Enter a valid number");
+				break;
+			}
+		}
+	}
+	
+	public static void displayMenu() {
+		System.out.println("\nMain menu:");
+		System.out.println("\t1. view products");
+		System.out.println("\t2. create order");
+		System.out.println("\t3. view order");
+		System.out.println("\t4. terminate program:");
+		System.out.println("Enter your choice:");
+
+	}
+	
+	public static int getUserInput(Scanner scanner) {
+		int userInput = 0;
+		while(true) {
+			try {
+				userInput = scanner.nextInt();
+				scanner.nextLine();
+				break;
+			} catch(InputMismatchException e) {
+				System.out.println(e.getMessage());
+				scanner.nextLine();
+				break;
+			}
+		}
+		return userInput;
+	}
+}

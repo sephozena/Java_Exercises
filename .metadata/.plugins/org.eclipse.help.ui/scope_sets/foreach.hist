@@ -1,0 +1,6 @@
+#Mon Sep 30 21:46:06 CST 2024
+expression=foreach
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.sdk.Eclipse.master=true
+__DEFAULT__=false
