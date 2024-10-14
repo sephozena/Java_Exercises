@@ -1,0 +1,25 @@
+package JavaProject;
+
+public class Tree {
+	
+	double heightFT;
+	double trunkDiameterInches;
+	TreeType treeType;
+	
+	
+/*
+ * the constructor Tree is used to create a custom tree.	
+ * when the Tree constructor is used, it will create a tree based on the input values or parameters.
+ */
+	Tree (double heightFT, double trunkDiameterInches, TreeType treeType){
+		this.heightFT = heightFT;
+		this.trunkDiameterInches = trunkDiameterInches;
+		this.treeType = treeType;
+	}
+	
+	void grow() {
+		this.heightFT = this.heightFT + 10;
+		this.trunkDiameterInches = this.trunkDiameterInches + 1;
+	}
+
+}

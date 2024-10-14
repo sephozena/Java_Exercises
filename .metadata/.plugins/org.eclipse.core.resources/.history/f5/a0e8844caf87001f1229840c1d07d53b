@@ -1,0 +1,8 @@
+package Exercise;
+
+public class Product {
+private String itemName;
+private int itemQty;
+private double itemPrice;
+
+}

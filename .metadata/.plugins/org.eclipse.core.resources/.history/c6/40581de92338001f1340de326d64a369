@@ -1,0 +1,36 @@
+package Inheritance;
+
+public class QA {
+	private String name;
+	private int age;
+	private double salary;
+	private double commissionPercentage;
+	
+	
+	public QA (String name,
+			int age,
+			double salary,
+			double commissionPercentage){
+		
+		this.name = name;
+		this.salary = salary;
+		this.commissionPercentage = commissionPercentage;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getAge() {
+		return this.age;
+	}
+	public double getSalary() {
+		return this.salary;
+	}
+	
+	
+	public double getAnnualBonus() {
+		return this.salary * 05;
+	}
+
+}

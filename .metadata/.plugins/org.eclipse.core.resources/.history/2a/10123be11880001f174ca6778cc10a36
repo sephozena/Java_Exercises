@@ -1,0 +1,32 @@
+package Practice2;
+
+import java.util.HashSet;
+
+public class ProductManagement {
+	HashSet<Product> productset = new HashSet<Product>();
+
+	public ProductManagement() {
+		productset.add(new Product("Apple", 15, 20));
+		productset.add(new Product("Banana", 12, 20));
+		productset.add(new Product("Mango", 17, 20));
+		productset.add(new Product("Guava", 10, 20));
+	}
+	
+	public void reduceQuantity(int quantity) {
+		for(Product product : productset) {
+			if(quantity <= 0) {
+				throw new IllegalArgumentException("Stock to remove must be positive.");
+			}
+	        if (product.getItemQuantity() > quantity) {
+	            throw new IllegalStateException("Insufficient stock. Current stock: " + quantity);
+	        }
+	        
+	        product.getItemQuantity() -= quantity;
+		}
+	}
+	
+	public void displayProduct() {
+		
+	}
+	
+}
