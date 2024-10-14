@@ -1,6 +1,0 @@
-package Practice7;
-
-public class ProductElectronic {
-	private String productWarranty;
-	private String productType;
-}

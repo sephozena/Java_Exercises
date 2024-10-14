@@ -1,8 +1,0 @@
-package Exercise;
-
-public class Product {
-private String itemName;
-private intitemQty;
-private double itemPrice;
-
-}
